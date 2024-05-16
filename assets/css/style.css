@@ -1,0 +1,644 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: url('../media/header_img.jpg') no-repeat center center/cover;
+    color: orange;
+    padding: 25px;
+    margin-top: 25px;
+    text-align: center;
+    font-size: large;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+
+
+/* Navigation */
+nav#menu {
+    background-color: #444;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+
+nav#menu ul {
+    list-style: none;
+    background-color: #444;
+    text-align: center;
+    padding: 10px;
+
+}
+
+nav#menu ul li {
+    display: inline;
+}
+
+#home {
+    background-color: #333;
+    /* Dark background for contrast */
+    text-align: center;
+    padding: 20px 20px;
+    color: #fff;
+    /* Light text for readability */
+    border-bottom: 5px solid rgb(235, 180, 0);
+    border-top: 5px solid rgb(235, 180, 0);
+    /* Stylish border to highlight the section */
+}
+
+#home h2 {
+    font-size: 2.5em;
+    /* Larger font size for the heading */
+    margin-bottom: 20px;
+    /* Space below the heading */
+    font-weight: bold;
+    /* Bold font for emphasis */
+}
+
+#home p {
+    font-size: 1.2em;
+    /* Slightly larger font size for readability */
+    max-width: 800px;
+    /* Max width to control line length */
+    margin: 0 auto 20px;
+    /* Centering paragraphs and spacing */
+    line-height: 1.8;
+    /* Increased line height for better readability */
+}
+
+/* Optional: Add a button or call-to-action */
+#home a.button {
+    display: inline-block;
+    background-color: rgb(235, 180, 0);
+    /* Button color that matches the accent */
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    /* Rounded corners for the button */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#home a.button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+#fps {
+    text-align: center;
+    padding: 100px;
+}
+
+#rpg {
+    text-align: center;
+}
+
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    transition: background 0.3s, color 0.3s;
+    font-family: bold, serif;
+
+}
+
+nav#menu ul li a:hover, nav#menu ul li a:focus {
+    background-color: orange;
+    color: #fff;
+}
+
+/* Sections */
+section {
+    padding: 15px;
+    margin: 0px;
+}
+
+#simulator {
+    text-align: center;
+}
+
+
+#order {
+    background-color: #545fc4;
+}
+
+
+#aboutus {
+    background-color: #333;
+    /* Light grey background for a subtle contrast */
+    padding: 40px 20px;
+    /* Ample padding for a spacious layout */
+    margin: auto;
+    margin-top: 50px;
+    /* Rounded corners for a modern look */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+
+}
+
+#aboutus h2 {
+    color: orange;
+    /* Deep blue for the heading to stand out */
+    padding: 10px;
+
+    text-align: center;
+    margin-bottom: 20px;
+    /* Space below the heading */
+    font-size: 2.5em;
+    /* Larger font size for the heading */
+}
+
+#aboutus p {
+    font-size: 1.2em;
+    /* Slightly larger font size for readability */
+    line-height: 1.8;
+    /* Increased line height for better readability */
+    margin-bottom: 20px;
+    /* Spacing between paragraphs */
+    text-align: justify;
+    /* Justified text for a clean, aligned appearance */
+    color: white;
+    /* Lighter grey for the text to reduce harshness */
+    font-family: sans-serif initial 'Times New Roman';
+}
+
+.gameAbout {
+    display: block;
+    /* Makes the image a block element to manage its positioning */
+    margin: 0 auto;
+    /* Automatically centers the image horizontally */
+    width: 500px;
+    /* Ensures the image does not exceed the container width */
+    height: auto;
+    margin-bottom: 26px;
+}
+
+/* Game Grid */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    /* Center items horizontally */
+    align-items: center;
+    /* Center items vertically */
+}
+
+#game-genres-section {
+    position: relative;
+    background-image: url('../media/genresWall.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 70px 0;
+    color: white;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#game-genres-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+#game-genres-section>* {
+    position: relative;
+    z-index: 2;
+    /* Ensure content is above the overlay */
+}
+
+.game-item {
+    background: #062e58;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.game-item img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.game-item h3 {
+    margin-top: 10px;
+}
+
+.orderh2 {
+    color: white;
+    text-align: center;
+    font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+    padding: 30px;
+}
+
+/*End of gamegenre-*/
+
+/* Form Styles */
+#order .order-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    /* Center children horizontally */
+    align-items: start;
+    /* Align children at the start of the container */
+    gap: 20px;
+    /* Space between the form and the image box */
+    background-color: #062e58;
+    padding: 76px;
+}
+
+
+
+.order-box,
+.image-box {
+    flex: 1;
+    /* Both children take up equal space */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.order-box {
+    max-width: 500px;
+    /* Limiting form width for aesthetics */
+}
+
+.image-box {
+    max-width: 500px;
+    /* Consistent sizing with the form */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 410.17px;
+
+}
+
+.image-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+.order-box h2 {
+    color: #333;
+    margin-bottom: 20px;
+    /* Space below the header */
+}
+
+.form-group {
+    margin-top: 25px;
+    /* Space between form inputs */
+    text-align: left;
+    /* Aligns the labels and inputs to the left */
+}
+
+
+.form-group label {
+    display: block;
+    /* Ensures the label is on top of the input/select */
+    margin-bottom: 5px;
+    /* Space between label and input/select */
+}
+
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    /* Full width inputs and selects */
+    padding: 8px;
+    border: 1px solid #ccc;
+    /* Light grey border around inputs and selects */
+    border-radius: 4px;
+    /* Rounded corners for inputs and selects */
+}
+
+label {
+    color: #333;
+}
+
+.actions button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    /* Space between buttons */
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.actions button:hover {
+    background-color: #003580;
+    /* Darker blue on hover for buttons */
+}
+
+
+
+/*GamePlan Section */
+#gamePlan {
+    background-color: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+}
+
+#gamePlan h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.plan {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex-grow: 1;
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    /* Scales up the card slightly */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Enhances shadow for a lifting effect */
+}
+
+.plan h3 {
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.plan p {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.plan ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.plan button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.plan button:hover {
+    background-color: black;
+}
+
+
+
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#news {
+    background-color: #062e58;
+    padding: 50px 0;
+    text-align: center;
+    font-family: sans-serif bold;
+    color: white;
+}
+
+#news h2 {
+    color: white;
+    margin-bottom: 40px;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.news-item {
+    background: white;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.news-item:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-10px);
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.news-content h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.news-content p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    font-weight: bold;
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.read-more:hover {
+    color: #003580;
+    text-decoration: underline;
+}
+
+
+
+
+
+/*Media Queries Here*/
+@media (max-width: 768px) {
+    .news-container {
+        grid-template-columns: 1fr;
+        /* Ensures single column layout on mobile */
+
+    }
+
+    nav#menu ul li {
+        display: block;
+        /* Stacks the links vertically */
+    }
+
+    .game-grid {
+        justify-content: center;
+    }
+
+    .game-item {
+        width: calc(50% - 20px);
+        /* Two items per row on smaller screens */
+    }
+
+    .gameAbout {
+        width: 300px;
+    }
+
+
+    .order-container {
+        flex-direction: column;
+        /* Stacks the .order-box and .image-box vertically */
+    }
+
+    .order-box,
+    .image-box {
+        max-width: none;
+        /* Removes max-width restriction */
+        width: 100%;
+        /* Takes full width of the container */
+        margin-bottom: 20px;
+        /* Adds space between stacked items */
+    }
+
+    .order-box,
+    .image-box {
+        padding: 20px;
+        /* Adjust padding for smaller screens */
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .game-item {
+        width: calc(150% - 20px);
+        /* One item per row on very small screens */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .game-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .order-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .order-box, .image-box {
+        max-width: 100%;
+        width: 90%;
+    }
+
+    nav#menu ul li {
+        display: block;
+        text-align: center;
+    }
+
+    nav#menu ul {
+        text-align: center;
+    }
+
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        width: 90%;
+    }
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <title>Game Shop</title>
+</head>
+<script src="./assets/js/app.js" type="module"></script>
+
+
+<body>
+    <header>
+        <h1>GAME SHOP</h1>
+        <div class="logo">
+            <img src="./assets/media/gameshop_logo.png" alt="Game Shop Logo">
+        </div>
+    </header>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html" class="">HOME</a></li>
+            <li><a href="#fps" class="">GAME GENRES</a></li>
+            <li><a href="#gamePlan" class="">GAMEPLAN</a></li>
+            <li><a href="#order" class="">ORDER NOW</a></li>
+            <li><a href="#news" class="">NEWS</a></li>
+            <li><a href="#aboutus" class="">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Game Shop</h2>
+        <p class="homep">Embark on an unforgettable gaming journey with Game Shop, your ultimate destination for
+            high-quality video games spanning a multitude of genres. From adrenaline-pumping first-person shooters to
+            vast, exploratory role-playing games, our selection is meticulously curated to fuel your passion for gaming.
+        </p>
+        <p class="homep">At Game Shop, we believe in the power of gaming to bring people together and create memorable
+            experiences. Whether you're battling dragons, racing through futuristic landscapes, or solving complex
+            puzzles, our collection is designed to cater to gamers of all types. With titles updated regularly and
+            classics always on hand, every visit to Game Shop promises new discoveries and thrilling adventures.</p>
+
+    </section>
+
+
+    <section id="game-genres-section">
+        <section id="fps">
+            <h2>DISCOVER OUR GAMES</h2>
+            <div class="game-grid">
+                <!-- Sample for FPS games -->
+                <div class="game-item">
+                    <h2>Featured FPS Games</h2>
+                    <img src="./assets/media/cs2.png" alt="Counter Strike 2">
+                    <h3>Counter Strike 2</h3>
+                    <p>Return to the battlefield with Counter Strike 2, where strategy meets precision in epic
+                        multiplayer
+                        shootouts. This sequel enhances every aspect of the original, offering new maps, modes, and an
+                        arsenal of weapons to master. Perfect for competitive gamers looking to test their skills
+                        against
+                        the best.</p>
+                </div>
+
+
+
+
+
+
+                <div class="game-item">
+                    <h2>Featured RPG Games</h2>
+                    <img class="elden-img" src="./assets/media/eldenring.png" alt="Elden Ring">
+                    <h3>Elden Ring</h3>
+                    <p>Embark on a quest through the expansive and breathtaking world of Elden Ring. As a Tarnished,
+                        seek
+                        out the Elden Rings to restore your power and challenge foes of unimaginable power. With deep
+                        lore,
+                        vast landscapes, and complex character development, Elden Ring promises an unparalleled
+                        adventure.
+                    </p>
+                </div>
+
+
+
+
+
+                <div class="game-item">
+                    <h2>Featured Simulator Games</h2>
+                    <img src="./assets/media/Forza_Horizon_5.jpg" alt="Forza Horizon 5">
+                    <h3>Forza Horizon 5</h3>
+                    <p>Speed through the vibrant landscapes of Mexico in Forza Horizon 5. Experience dynamic weather, a
+                        day
+                        and night cycle, and the most expansive car list ever. From dusty trails to lush jungles and
+                        ancient
+                        cities, customize your rides and tackle challenges in this immersive driving simulator.</p>
+                </div>
+
+
+                <div class="game-item">
+                    <h2>Featured Sports Games</h2>
+                    <img src="./assets/media/fc24.png" alt="FC24">
+                    <h3>FC 24</h3>
+                    <p>EA SPORTS FC™ 24 welcomes you to The World 's Game: the most true-to-football experience ever
+                        with
+                        HyperMotionV, PlayStyles optimised by Opta, and an enhanced Frostbite™ Engine.</p>
+                </div>
+                <!-- Add more game items as needed -->
+            </div>
+        </section>
+
+    </section>
+
+
+    <section id="order">
+        <h2 class="orderh2">Order Game</h2>
+        <div class="order-container">
+            <div class="order-box">
+                <h2>Order Your Favorite Games</h2>
+                <form id="order-form" action="">
+                    <!-- Form content -->
+                    <div id="div-selects">
+                        <!-- Dynamic selects will be inserted here -->
+                    </div>
+                    <div class="form-group actions">
+                        <button type="reset">Reset</button>
+                        <button type="button" onclick="//goBack()">Back</button>
+                        <button type="submit">Submit Order</button>
+                    </div>
+                </form>
+            </div>
+            <div class="image-box">
+                <img id="dynamic-image" src="./assets/media/placeholder.png" alt="Dynamic Game Image"
+                    style="max-width:100%; height:auto;">
+            </div>
+        </div>
+    </section>
+
+    <section id="gamePlan">
+        <h2>Choose Your Game Plan</h2>
+        <div class="plans-container">
+            <div class="plan">
+                <h3>Basic Plan</h3>
+                <p>€5/month</p>
+                <ul>
+                    <li>Access to select games</li>
+                    <li>Standard support</li>
+                    <li>Monthly newsletters</li>
+                </ul>
+                <button type="button">Subscribe</button>
+            </div>
+            <div class="plan">
+                <h3>Advanced Plan</h3>
+                <p>€50/month</p>
+                <ul>
+                    <li>Access to all standard games</li>
+                    <li>Priority support</li>
+                    <li>Weekly updates</li>
+                    <li>Exclusive community access</li>
+                </ul>
+                <button type="button">Subscribe</button>
+            </div>
+            <div class="plan">
+                <h3>Premium Plan</h3>
+                <p>$150/month</p>
+                <ul>
+                    <li>All-inclusive game library access</li>
+                    <li>24/7 premium support</li>
+                    <li>Daily gaming tips</li>
+                    <li>Access to beta releases</li>
+                    <li>Special events invitations</li>
+                </ul>
+                <button type="button">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="news">
+        <h2>Latest News</h2>
+        <div class="news-container">
+            <article class="news-item">
+                <img src="./assets/media/relases.jpg" alt="Exciting Game Release">
+                <div class="news-content">
+                    <h3>New Game Release!</h3>
+                    <p>Get ready to dive into the action with our latest game, launching next week. 'Adventure Quest:
+                        Dawn of Heroes' promises to bring groundbreaking mechanics and an epic storyline that will
+                        redefine the gaming landscape. Experience the journey of a lifetime as you traverse enchanted
+                        lands filled with perilous dangers and breathtaking beauty.</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+            </article>
+            <article class="news-item">
+                <img src="./assets/media/tournament.jpg" alt="Annual Gaming Tournament">
+                <div class="news-content">
+                    <h3>Upcoming Tournament</h3>
+                    <p>Mark your calendars for the ultimate showdown at our annual Gaming Masters Tournament. Slated for
+                        next month, competitors from around the globe will battle it out in a series of games to claim
+                        the top prize. This year's tournament features increased stakes with a grand prize of $50,000,
+                        exclusive merchandise, and the chance to gain early access to upcoming releases.</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+            </article>
+            <article class="news-item">
+                <img src="./assets/media/interview.jpg" alt="Developer Interview">
+                <div class="news-content">
+                    <h3>Exclusive Interview</h3>
+                    <p>Join us for an exclusive interview with Mia Johnston, the creative genius behind the blockbuster
+                        hit 'Galaxy Defenders.' Mia will share her insights on the future of interactive storytelling
+                        and her upcoming projects. Discover the inspiration behind her innovative game designs and what
+                        it takes to create worlds that captivate and engage millions of players worldwide.</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="aboutus">
+        <h2>About Us</h2>
+        <p>Founded in 2020, Game Shop has quickly established itself as a premier destination for gamers seeking
+            quality, diversity, and community. Our mission is to deliver an exceptional gaming experience by offering a
+            wide selection of games across various genres, from indie gems to blockbuster hits. At Game Shop, we're more
+            than just a store; we're a hub for gamers who crave engaging gameplay and meaningful connections.</p>
+
+        <p>Our team is composed of avid gamers and industry veterans who understand the importance of customer service,
+            expert guidance, and reliable support. We meticulously select our games to ensure they meet our high
+            standards of engagement, innovation, and artistic value. Whether you are a casual gamer looking to unwind or
+            a hardcore enthusiast searching for your next challenge, Game Shop is your go-to source for all your gaming
+            needs.</p>
+
+        <p>Game Shop is also committed to fostering a strong gaming community. We host regular events, tournaments, and
+            workshops that bring gamers together to share their passion, enhance their skills, and make lasting
+            friendships. Our community initiatives support local and online gamers alike, providing a platform where
+            everyone can thrive.</p>
+
+        <p>Explore our extensive catalog online or visit us in person to experience the Game Shop difference. Discover
+            why thousands of gamers trust us for their gaming adventures. At Game Shop, your next great game awaits!</p>
+        <img class="gameAbout" src="./assets/media/GameStore_Logo.jpg" alt="StoreAbout">
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Game Shop, Inc. All rights reserved.</p>
+    </footer>
+
+
+
+</body>
+
+</html>
