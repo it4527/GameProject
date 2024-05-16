@@ -35,4 +35,11 @@ export class GameModel {
     getOptions(selectID) {
         return this.#dataSource[selectID] || [];
     }
+
+
+    store() {
+        localStorage.setItem("game", JSON.stringify(this));
+    }
+
+
 }

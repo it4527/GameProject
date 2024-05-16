@@ -10,6 +10,7 @@ export class GameView {
          */
         this.dynamicImage = document.querySelector("#dynamic-image");
 
+        this.orderForm = document.querySelector("#order-form");
         /**
          * Array to store the select elements
          */

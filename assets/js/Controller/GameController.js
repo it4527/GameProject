@@ -23,6 +23,7 @@ export class GameController {
 
         // Bind event handlers
         this.view.bindSelectionChange(this.handleSelectChange.bind(this));
+        this.view.orderForm.addEventListener("submit", this.handleFormSubmit);
     }
 
     /**
@@ -46,5 +47,12 @@ export class GameController {
 
         // Always render the dynamic image based on the current selections
         this.view.renderDynamicImage();
+    }
+
+
+    handleFormSubmit = (event) => {
+        //prevent the default action of a form (prevent submitting it)
+        //event.preventDefault();
+        this.model.store();
     }
 }
