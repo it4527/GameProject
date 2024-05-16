@@ -115,11 +115,11 @@ input[type="submit"]:hover {
 @media (max-width: 600px) {
     h1 {
         font-size: 2em;
-    
     }
 
     form {
         padding: 15px;
+       max-width: 350px;
     }
 
     input[type="text"],
@@ -127,6 +127,4 @@ input[type="submit"]:hover {
         width: calc(100% - 15px);
         padding: 8px;
     }
-
-
 }

@@ -2,18 +2,18 @@ export class FormModel {
 
 
     constructor() {
-        this.game = "";
-        this.genre = "";
-        this.plan = "";
+        this.name = "";
+        this.email = "";
+        this.address = "";
         this.init();
     }
 
 
 
     init() {
-        let game = JSON.parse(localStorage.getItem('game')) || {};
-        for (let property in game) {
-            this[property] = game[property];
+        let name = JSON.parse(localStorage.getItem('name')) || {};
+        for (let property in name) {
+            this[property] = name[property];
         }
     }
 
@@ -28,14 +28,15 @@ export class FormModel {
 
 
     store() {
-        localStorage.setItem('game', JSON.stringify(this));
+        localStorage.setItem('order', JSON.stringify(this));
     }
 
     getInputOptions() {
         return {
-            genre: "Please Enter genre",
-            game: "Please Enter game",
-            plan: "Please Enter plan"
+            name: "Please Enter name",
+            email: "Please Enter E-mail address",
+            phone: "Please Enter phone number",
+            address: "Please Enter Address"
         };
     }
 
