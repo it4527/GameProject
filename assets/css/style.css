@@ -200,17 +200,29 @@ section {
 /* Game Grid */
 .game-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
     gap: 20px;
     padding: 20px;
+
+    /* center the whole grid nicely */
+    max-width: 1300px;
+    margin: 0 auto;
+
     justify-items: center;
-    /* Center items horizontally */
-    align-items: center;
-    /* Center items vertically */
+    align-items: start;
 }
+
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 
 #game-genres-section {
     position: relative;
+    overflow: hidden;
+    /* keeps the overlay contained */
     background-image: url('../media/genresWall.jpg');
     background-size: cover;
     background-position: center;
@@ -241,7 +253,8 @@ section {
     background: #062e58;
     border: 1px solid #ddd;
     padding: 20px;
-    width: 50%;
+    width: 100%;
+    /* <-- key change */
     max-width: 600px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -250,6 +263,7 @@ section {
 .game-item img {
     max-width: 100%;
     height: auto;
+    display: block;
     border-bottom: 1px solid #ddd;
 }
 
@@ -455,8 +469,8 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
+    padding: 5px;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -549,7 +563,7 @@ footer {
     }
 
     .game-grid {
-        justify-content: center;
+        grid-template-columns: 1fr;
     }
 
     .game-item {
@@ -591,6 +605,7 @@ footer {
         width: calc(150% - 20px);
         /* One item per row on very small screens */
     }
+
     .game-genres-section {
         width: auto;
         height: auto;
